@@ -1,0 +1,16 @@
+.tableContainer {
+  height: 400px;
+  width: 100%;
+  margin-top: 50px; /* فاصله 50 پیکسل از بالا */
+  background-color: rgba(255, 255, 255, 0.9); /* پس‌زمینه‌ی سفید با شفافیت */
+  border-radius: 8px; /* گرد کردن گوشه‌ها */
+  padding: 16px; /* اضافه کردن فضای داخلی */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* اضافه کردن سایه */
+}
+
+@media (max-width: 600px) {
+  .tableContainer {
+    width: 100%;
+    padding: 16px;
+  }
+}

@@ -1,0 +1,119 @@
+.cartContainer {
+  padding: 2rem;
+  margin-top: 2.5rem;
+  background-color: #f9f9f9;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.cartTitle {
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.emptyCartMessage {
+  font-size: 1.2rem;
+  color: #999;
+  text-align: center;
+}
+
+.cartList {
+  padding: 0;
+}
+
+.cartListItem {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1.5rem;
+  border-bottom: 1px solid #e0e0e0;
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.05);
+}
+
+.itemName {
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 0.5rem;
+}
+
+.itemDetailsList {
+  margin-bottom: 1rem;
+}
+
+.productDetail {
+  margin-bottom: 0.25rem;
+}
+
+.productDetailLabel {
+  font-weight: bold;
+  margin-right: 0.25rem;
+  color: #333;
+}
+
+.productDetailValue {
+  color: #555;
+}
+
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.quantityButton {
+  margin-right: 0.5rem;
+  min-width: 2.5rem;
+  padding: 0.5rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.quantityButton:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.removeButton {
+  color: #d9534f;
+  border-color: #d9534f;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.removeButton:hover {
+  background-color: #d9534f;
+  color: #fff;
+}
+
+.checkoutContainer {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.checkoutButton {
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  background-color: #007bff;
+  color: #fff;
+  transition: background-color 0.3s;
+  border-radius: 0.5rem;
+}
+
+.checkoutButton:hover {
+  background-color: #0056b3;
+}
+
+.backToProductsButton {
+  margin-top: 2rem;
+  color: #007bff;
+  border-color: #007bff;
+}
+
+.totalPrice {
+  margin-top: 1.5rem;
+  text-align: right;
+  font-weight: bold;
+  color: #333;
+}

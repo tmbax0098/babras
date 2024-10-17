@@ -1,0 +1,58 @@
+.customArrow {
+  background-color: #051b33;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.customArrow:hover {
+  background-color: #ee05c7;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+.sliderContainer {
+  box-shadow: 0 8px 35px rgba(0, 0, 0, 0.85);
+  border: 1px solid #070f18;
+  transition: all 0.5s ease;
+}
+
+
+
+.dotsContainer {
+  padding: 20px;
+}
+
+.dotsList {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+ 
+}
+
+.customPaging {
+  width: 16px;
+  height: 16px;
+  background-color: #085761;
+  border-radius: 50%;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.customPaging:hover {
+  background-color: #d800f5;
+  transform: scale(1.2);
+}
+
+.slick-active .customPaging {
+  background-color: #ed00f5;
+}

@@ -1,0 +1,64 @@
+.container {
+  direction: rtl; /* تعیین جهت کلی به راست به چپ */
+}
+
+.productCard {
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.884);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  padding: 15px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+.productImage {
+  border-radius: 12px;
+  object-fit: cover;
+  height: 250px;
+  width: 100%;
+}
+
+.productTitle {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.productCategory {
+  font-size: 0.85rem;
+  color: gray;
+  margin-top: 4px;
+  word-wrap: break-word;
+  overflow: hidden;
+}
+
+.productPrice {
+  font-size: 1rem;
+  color: #3f51b5;
+  font-weight: bold;
+  margin-top: auto;
+  max-width: 100%;
+}
+
+.productStatus {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: rgba(0, 123, 255, 0.8);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: bold;
+  direction: rtl; /* جهت دهی به استایل وضعیت محصول */
+}

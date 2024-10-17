@@ -1,0 +1,48 @@
+/* AccountMenu.module.css */
+
+
+.logInButton {
+    background-color: #1a73e8;
+    color: #fff;
+    display: flex;
+    justify-content: center; /* وسط‌چین کردن متن و آیکون */
+    align-items: center;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    font-size: 18px; /* بزرگ‌تر کردن متن */
+    padding: 6px 16px; /* کاهش فضای داخلی دکمه از چهار طرف */
+    min-width: auto; /* جلوگیری از کشیده شدن طول دکمه */
+    margin: 0px 20px; /* تنظیم حاشیه */
+    border: 2px solid #072e3a; /* اضافه کردن یک مرز اختصاصی به دکمه */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* سایه برای دکمه */
+    position: relative;
+  }
+  
+
+
+
+
+  .logInButton:hover {
+    background-color: #1a96e8b7; /* تغییر رنگ در هنگام هاور */
+  }
+  
+  .menuPaper {
+    background-color: #1f1f1f;
+    color: #fff;
+    min-width: 300px;
+    padding: 10px;
+    margin-top: 0; /* ایجاد فاصله کمتر برای جلوگیری از تکان خوردن */
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5); /* سایه برای زیبایی بیشتر */
+    position: relative; /* یا می‌توانید به جای relative از fixed استفاده کنید */
+  }
+  
+  
+  .menuItemHover:hover {
+    background-color: #3c3c3c; /* تغییر رنگ در هنگام هاور برای آیتم‌های منو */
+  }
+  
+  .divider {
+    border-color: #444;
+    margin-bottom: 5px;
+  }
+  

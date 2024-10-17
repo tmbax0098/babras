@@ -1,0 +1,103 @@
+/* PhoneVerification.module.css */
+
+.container {
+  max-width: 400px; /* حداکثر عرض */
+  margin: 50px auto; /* فاصله از بالا و مرکز */
+  padding: 40px; /* فضای داخلی بیشتر */
+
+  background-color: #ffffff; /* پس‌زمینه سفید */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); /* سایه ملایم */
+  transition: box-shadow 0.3s ease; /* افکت سایه نرم */
+}
+
+.container:hover {
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.15); /* سایه بیشتر هنگام هاور */
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column; /* چینش عمودی */
+  align-items: center; /* مرکز چینش */
+}
+
+.header {
+  font-size: 28px; /* سایز بزرگتر برای عنوان */
+  font-weight: 700; /* بولد */
+  color: #2c3e50; /* رنگ تیره و مدرن */
+  margin-bottom: 20px; /* فاصله زیر عنوان */
+  text-align: center; /* مرکز متن */
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column; /* چینش عمودی */
+  margin-bottom: 20px; /* فاصله زیر گروه ورودی */
+  width: 100%; /* عرض کامل */
+}
+
+.input {
+  padding: 12px; /* فضای داخلی بیشتر */
+  font-size: 16px; /* سایز فونت */
+  margin-bottom: 10px; /* فاصله بین ورودی‌ها */
+  border: 1px solid #dcdcdc; /* حاشیه ملایم */
+
+  transition: border-color 0.3s ease; /* افکت تغییر رنگ حاشیه */
+}
+
+.input:focus {
+  border-color: #007bff; /* تغییر رنگ حاشیه هنگام فوکوس */
+  outline: none; /* حذف حاشیه پیش‌فرض مرورگر */
+}
+
+.button {
+  padding: 12px; /* فضای داخلی بیشتر */
+  font-size: 16px; /* سایز فونت */
+  background-color: #007bff; /* رنگ پس‌زمینه دکمه */
+  color: white; /* رنگ متن */
+  border: none; /* بدون حاشیه */
+  border-radius: 2px; /* حاشیه نرم */
+  cursor: pointer; /* نشانه گر ماوس */
+  transition: background-color 0.3s ease, transform 0.2s; /* افکت تغییر رنگ و حرکت */
+  width: 100%; /* عرض کامل */
+}
+
+.button:hover:not(:disabled) {
+  background-color: #0056b3; /* تغییر رنگ دکمه هنگام هاور */
+  transform: translateY(-2px); /* حرکت جزئی هنگام هاور */
+}
+
+.button:disabled {
+  background-color: #a0a0a0; /* رنگ دکمه غیرفعال */
+  cursor: not-allowed; /* نشانه گر غیرقابل استفاده */
+}
+
+.errorMessage {
+  color: red; /* رنگ قرمز برای پیام خطا */
+  margin-bottom: 10px; /* فاصله زیر پیام خطا */
+  font-weight: 500; /* وزن متوسط */
+}
+
+.successMessage {
+  color: green; /* رنگ سبز برای پیام موفقیت */
+  margin-top: 10px; /* فاصله بالای پیام موفقیت */
+  font-weight: 500; /* وزن متوسط */
+}
+
+.timer {
+  margin-top: 10px; /* فاصله بالای تایمر */
+}
+
+.resendButton {
+  margin-top: 10px; /* فاصله بالای دکمه ارسال دوباره */
+  background-color: #28a745; /* رنگ سبز برای دکمه ارسال دوباره */
+  color: white; /* رنگ متن */
+  padding: 10px; /* فضای داخلی */
+  border: none; /* بدون حاشیه */
+  
+  cursor: pointer; /* نشانه گر ماوس */
+  transition: background-color 0.3s ease; /* افکت تغییر رنگ */
+}
+
+.resendButton:hover {
+  background-color: #218838; /* تغییر رنگ هنگام هاور */
+}
