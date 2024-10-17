@@ -1,46 +1,40 @@
 import { NextResponse, NextRequest } from 'next/server';
-import axios, { AxiosError } from 'axios';
+import axios from 'axios';
+
+const API_URL = process.env.API_URL || 'http://localhost:3001/users/account';
 
 export async function GET(request: NextRequest) { 
   try {
-    // استخراج توکن از هدر درخواست
     const token = request.headers.get('Authorization')?.split(' ')[1]; 
     if (!token) {
-      return NextResponse.json({ error: 'No token provided' }, { status: 401 });
+      return NextResponse.json({ error: 'Unauthorized: No token provided' }, { status: 401 });
     }
 
-    // ارسال درخواست به API برای دریافت اطلاعات کاربر
-    const response = await axios.get('http://localhost:3001/users/account', {
+    const response = await axios.get(API_URL, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
     });
 
-    // بررسی وضعیت پاسخ API
     if (response.status !== 200) {
       return NextResponse.json({ error: 'Failed to retrieve user data' }, { status: response.status });
     }
 
-    // دریافت داده‌های کاربر از API
     const userData = response.data; 
     return NextResponse.json({
-      phone: userData.phone || '',
-      email: userData.email || '',
-      address: userData.address || '',
-      fullname: userData.fullname || '',
+      phone: userData.phone || 'N/A',
+      email: userData.email || 'N/A',
+      address: userData.address || 'N/A',
+      fullname: userData.fullname || 'N/A',
     });
   } catch (error) {
-    console.error('Error fetching user data:', (error as AxiosError).message);
-
-    // مدیریت خطای axios با جزئیات بیشتر
-    if (axios.isAxiosError(error) && error.response) {
-      console.error('Error details:', error.response.data);
-      return NextResponse.json(
-        { error: 'Failed to fetch user data', details: error.response.data }, 
-        { status: error.response.status }
-      );
+    if (axios.isAxiosError(error)) {
+      const status = error.response?.status || 500;
+      const message = status >= 500 ? 'Server error occurred' : 'Client error occurred';
+      
+      return NextResponse.json({ error: message, details: error.response?.data }, { status });
     } else {
-      return NextResponse.json({ error: 'Failed to fetch user data' }, { status: 500 });
+      return NextResponse.json({ error: 'Unknown error occurred' }, { status: 500 });
     }
   }
 }
